@@ -1,0 +1,30 @@
+section {
+	margin: 20px 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.left, .right, .middle {
+	background-color: yellow;
+	width:  50px;
+	height: 50px;
+	border:  2px solid black;
+	
+}
+
+.middle_wing {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.left, .right {
+	margin: 10px 10px;
+}
+
+.middle
+{
+	margin: 20px 20px;
+}
