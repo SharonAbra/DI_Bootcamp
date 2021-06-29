@@ -1,0 +1,32 @@
+section {
+	height:  400px;
+	padding:  5px;
+	display: flex;
+	border:  solid orange;
+	margin:  10px 10px;
+	flex-direction: column;
+	border-color: red;
+	border-width: 5px;
+	justify-content: space-between;
+	justify-content: center;
+
+}
+
+.box {
+	height: 100px;
+	border-style: solid;
+	border-color: blue;
+	border-width: thin;
+	color:  white;
+	font-weight: 100;
+	background-color:  lightblue;
+	border-color: blue;
+	justify-content: center;
+	align-items: center;
+}
+
+.div2 {
+	width: 1200px;
+	height:  400px;
+	align-self: center;
+}
