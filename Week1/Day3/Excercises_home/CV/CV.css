@@ -1,0 +1,50 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-image: url(https://images.unsplash.com/photo-1548020751-bd94af3f1b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+	margin: 10px 200px;
+	padding:  10px;
+	height:  1100px;
+	font-family: calibri;
+}
+
+.left {
+	background-color: #e6faff;
+	border-radius-top-left: 5px;
+	border-radius-bottom-left: 5px;
+	width: 1300px;
+	text-align: center;
+	padding-top:  150px;
+}
+.right {
+	
+	background-color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 3000px;
+	line-height: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.namecaps, h4,  {
+	line-height: 20px;
+}
+
+.right > h1 {
+color:  black;
+}
+
+.experience-list1, .experience-list2, .experience-list3, .experience-list4 {
+text-align: justify;
+text-justify: inter-word;
+line-height: 17px;
+}
+
+.military {
+text-align: justify;
+text-justify: inter-word;
+line-height: 17px;
+}
+
