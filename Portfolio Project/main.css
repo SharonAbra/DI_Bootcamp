@@ -1,0 +1,34 @@
+body {
+	
+	font-family: 'varela';
+}
+
+.row {
+	background-color: #BEA1B1;
+}
+
+.navbar-dark {
+	background-color: #440026 !important;
+}
+
+.header {
+	background-image: url("headerback.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 600px;
+}
+
+
+h1 {
+	color: #440026;
+	text-align: center;
+}
+
+.btn-primary {
+	background-color: #661141;
+}
+
+.card-body {
+	background-color: #AA5585;
+}

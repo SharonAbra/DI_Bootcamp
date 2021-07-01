@@ -1,0 +1,57 @@
+section {
+	height: 500px;
+	margin:  20px 300px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-gap: 4px;
+	grid-template-areas: 
+	"blue blue blue"
+	"purple yellow yellow"
+	"purple yellow yellow"
+	"olive yellow yellow"
+	"olive grey grey"
+	"lightgreen lightgreen pink"
+	"orange orange orange"
+}
+
+
+.blue {
+	background: lightblue;
+	grid-area: blue;
+}
+
+.purple {
+	background: purple;
+	grid-area: purple;
+}
+
+.yellow {
+	background-color: yellow;
+	grid-area: yellow;
+}
+
+.olive {
+	background-color: olive;
+	grid-area: olive;
+}
+
+.grey {
+	background-color: grey;
+	grid-area: grey;
+}
+
+.green {
+	background-color: lightgreen;
+	grid-area: lightgreen;
+}
+
+.pink {
+	background-color: pink;
+	grid-area: pink;
+}
+
+.orange {
+	background-color: orange;
+	grid-area: orange;
+}

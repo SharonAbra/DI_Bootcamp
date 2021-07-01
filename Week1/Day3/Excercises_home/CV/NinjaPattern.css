@@ -1,0 +1,30 @@
+
+.full-grid {	
+	border: 1px solid black;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.single_grid {
+	
+	width: 100px;
+	height: 100px;
+	display: grid;
+}
+
+.box {
+	border: 1px solid white;
+		}
+
+.three, .five, .seven {
+	background-color: #804000;
+}
+
+.one, .six, .eight {
+	background-color: #ff8000;
+}
+
+.two, .four, .nine {
+background-color: #ffbf80;
+}
+
