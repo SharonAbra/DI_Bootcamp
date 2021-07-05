@@ -1,0 +1,125 @@
+body {
+	font-family: 'inter';
+	margin: 0px;
+	pading: 0px;
+	background-color: lightgrey;
+}
+
+.header {
+	grid-column-end: span 3;
+	/*height: 150px;*/
+	text-align: center;
+	padding-top: 10px;
+}
+
+.container {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 4fr;
+	grid-gap: 20px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	/*height: 700px;*/
+}
+
+.box {
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	/*align-items: stretch;*/
+	border-radius: 3px;
+}
+
+.white {
+	background-color: white;
+	width: 100%;
+	text-align: center;
+
+}
+
+.blue {
+	color: white;
+	background-color: #2A4D6E;
+	width: 100%;
+	font-size: 60%;
+	line-height: 180%;
+}
+
+h3 {
+	padding-left: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+ul {
+	list-style-type: none;
+	padding-top: 0px;
+	padding-left: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top:  10px;
+  border-radius: 3px;
+}
+
+.fa-users {
+	color: #2A4D6E;
+	font-size: 400%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.credit {
+	font-size: 70%;
+}
+
+hr {
+	color: white;
+	width:  85%;
+}
+
+.user_type {
+	text-transform: uppercase;
+	/* margin-bottom: 0px; */
+}
+
+.usage {
+	padding-bottom: 10px;
+}
+
+.explanation {
+	width:  90%;
+	align-self: center;
+	font-size: 13px;
+	/* line-height: 2px; */
+}
+
+/* .price, .period {
+	display: inline-block;
+} */
+
+
+/*changing the p to span requires removing some 
+padding and margin properties.
+also, finding a way to align the price and perios (perhaps another div)*/
