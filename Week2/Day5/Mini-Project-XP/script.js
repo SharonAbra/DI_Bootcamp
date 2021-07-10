@@ -57,6 +57,7 @@ function playTheGame() {
 	
 	let userNumber = parseInt(prompt("Please type a number between 0 and 10."));
 	counter ++;
+	console.log(counter);
 
 		while (isNaN(userNumber) || userNumber < 0 || userNumber > 10) {
 			if (isNaN(userNumber)) {
@@ -70,7 +71,7 @@ function playTheGame() {
 	let computerNumber = Math.floor(Math.random() * 11);	
 	function test(userNumber,computerNumber) {
 
-		while (counter <= 3) {
+		while (counter < 3) {
 			if (isNaN(userNumber)) {
 				break;
 			}
@@ -78,9 +79,11 @@ function playTheGame() {
 			if (userNumber < computerNumber) {
 				userNumber = parseInt(prompt("Your number is smaller then the computer’s, guess again."));
 				counter ++;
+				console.log(counter);
 			} else if (userNumber > computerNumber) {
 				userNumber = parseInt(prompt("Your number is bigger then the computer’s, guess again."));
 				counter ++;
+				console.log(counter);
 			} else if (userNumber === computerNumber) {
 				alert("WINNER!");
 				break;
