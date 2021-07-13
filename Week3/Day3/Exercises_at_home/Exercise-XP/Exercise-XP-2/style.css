@@ -1,0 +1,22 @@
+  #target {
+    width: 200px;
+    height: 200px;
+   /* position: relative;*/
+    background: yellow;
+  }
+
+  #drag {
+    width: 50px;
+    height: 50px;
+   /* position: absolute;*/
+    background-color: red;
+  }
+
+  .during {
+    opacity: 0.5;
+  }
+
+  .enter {
+    border: 3px dotted red;
+    opacity: 0.5;
+  }
