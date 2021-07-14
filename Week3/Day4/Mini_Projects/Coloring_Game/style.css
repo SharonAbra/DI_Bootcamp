@@ -1,0 +1,126 @@
+.full {
+	padding: 10px;
+	background-color: grey;
+	height: 500px;
+	padding-left: 0px;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(60, 1fr);
+	grid-template-rows: repeat(24, 1fr);
+	background-color: white;
+	padding: 0px;
+	
+}
+
+.pallete {
+	height: 400px;
+	background-color: grey;
+	margin: 0px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	grid-gap: 3px;
+}
+
+.clear {
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 15px;
+	font-size: 150%;
+}
+
+.cell {
+	border: 1px solid lightgrey;
+}
+
+.box {
+	border: 1px solid black;
+}
+
+.red {
+	background-color: red;
+}
+
+.orangered {
+	background-color: orangered;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.yellowgreen {
+	background-color: yellowgreen;
+}
+
+.lightgreen {
+	background-color: lightgreen;
+}
+
+.green {
+	background-color: green;
+}
+
+.darkturquoise {
+	background-color: darkturquoise;
+}
+
+.cyan {
+	background-color: cyan;
+}
+
+.lightskyblue {
+	background-color: lightskyblue;
+}
+
+.dodgerblue {
+	background-color: dodgerblue;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.navy {
+	background-color: navy;
+}
+
+.darkmagenta {
+	background-color: darkmagenta;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.orchid {
+	background-color: orchid;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.lightgray {
+	background-color: lightgray;
+}
+
+.dimgray {
+	background-color: dimgray;
+}
+
+.black {
+	background-color: black;
+	border: white;
+}
+
+.white {
+	background-color: white;
+}
