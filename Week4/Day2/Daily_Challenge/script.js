@@ -7,9 +7,15 @@ let groceries = {
         meansOfPayment : ["cash", "creditCard"]
     }
 }
+
+/// cloning:
+
+let clone = Object.assign({}, groceries);
+groceries["totalPrice"] = "35$";
+groceries["other"]["payed"] = false;
+
 console.log(groceries);
-groceries2 = groceries;
-groceries.totalPrice = "35$";
-groceries.other.payed = false;
-console.log(groceries);
-console.log(groceries2);
+console.log(clone);
+
+
+
