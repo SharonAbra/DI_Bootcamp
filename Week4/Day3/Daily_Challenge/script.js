@@ -12,14 +12,9 @@ let getCarHonda = carInventory => {
     return sentence;
 }
 
-console.log(getCarHonda(inventory));
-
 let sortCarInventoryByYear = carInventory => {
-    
-    let soretdInventory = carInventory.sort(function(a, b) {
-        return a["car_year"] - b["car_year"];
-    });
-return soretdInventory
+    return carInventory.sort((a, b) => a["car_year"] - b["car_year"]);
 };
 
+console.log(getCarHonda(inventory));
 console.log(sortCarInventoryByYear(inventory));
