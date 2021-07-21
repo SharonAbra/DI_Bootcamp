@@ -12,9 +12,29 @@ let getCarHonda = carInventory => {
     return sentence;
 }
 
-let sortCarInventoryByYear = carInventory => {
-    return carInventory.sort((a, b) => a["car_year"] - b["car_year"]);
+function sortCarInventoryByYear(carInventory) {
+    let sortedList = carInventory.sort(function(a, b) {
+        return a["car_year"] - b["car_year"];
+    });
+    return sortedList;
 };
+
+//****make the function one-line: */
+// make an arrow function
+// remove function keyword
+// assign the function to a variable
+// remove variable name of sort function
+// make the outer function one line
+// remove return keyword
+// make the inner function arrow and one line
+//remove function keyword
+// remove the ()
+
+//this is the result:
+let sortCarInventoryByYear = carInventory => carInventory.sort((a, b) => a["car_year"] - b["car_year"]);
 
 console.log(getCarHonda(inventory));
 console.log(sortCarInventoryByYear(inventory));
+
+
+
