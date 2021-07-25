@@ -11,13 +11,14 @@ const validate = (event)=> {
 const generateTable = () => {
     const searchParams = new URLSearchParams(window.location.search);
     const { username } = Object.fromEntries(searchParams);
+    const { password } = Object.fromEntries(searchParams)
     let table = document.createElement("table");
     let tbody = document.createElement("tbody");
     let row = document.createElement("tr");
     let cellUser = document.createElement("td");
     let cellPass = document.createElement("td");
     cellUserText = document.createTextNode("username is: "+username);
-    cellPassText = document.createTextNode("password is: "+document.getElementById("password").value);
+    cellPassText = document.createTextNode("password is: "+password);
     cellUser.appendChild(cellUserText);
     cellPass.appendChild(cellPassText);
     row.appendChild(cellUser);
