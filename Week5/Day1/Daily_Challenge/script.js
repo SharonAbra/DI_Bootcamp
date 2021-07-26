@@ -8,3 +8,8 @@ const sendData = (event)=> {
 
 let form = document.forms[0];
 form.addEventListener("submit", sendData);
+
+
+// let searchParams = new URLSearchParams(window.location.search)
+// searchParams = Object.fromEntries(searchParams)
+// document.body.append(JSON.stringify(searchParams))
