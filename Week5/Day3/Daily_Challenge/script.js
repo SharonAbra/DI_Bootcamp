@@ -26,12 +26,12 @@ const sortWords = (array) => {
 makeAllCaps(arrayOfWords)
     .then(sortWords)
     .then((result) => console.log(result))
-    .catch(error => console.log('error: type must be string'))
+    .catch(error => console.log(error+' : type must be string'))
 
 makeAllCaps(complicatedArray)
     .then(sortWords)
     .then((result) => console.log(result))
-    .catch(error => console.log('error: type must be string'))
+    .catch(error => console.log(error+ ' : type must be string'))
 
 let morse = `{
     "0": "-----",
