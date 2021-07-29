@@ -1,0 +1,56 @@
+body {
+    background-image: url('money.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:azure
+  }
+
+.container {
+    background-color:rgb(0, 153, 153, 0.9);
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+button {
+    margin-top: 10px;
+    border: 2px solid azure;
+    border-radius: 4px;
+    background-color: rgb(0, 153, 153);
+    color: azure;
+    font-size: 130%
+}
+
+button:hover {
+    filter: brightness(85%);
+
+}
+
+.display {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+.result {
+    font-weight: bold;
+    font-size: 150%;
+    margin-top: 25px;
+}
+
+.selectFrom, .selectTo {
+    width: 300px;
+}
+
