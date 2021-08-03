@@ -24,8 +24,10 @@ SELECT * FROM SecondTab
 -- the first result will be a table with 4 people (id's and names)
 -- the second  result will be a table with 2 rows, one of which is with the value null
 
-SELECT COUNT(*) FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
+SELECT COUNT(*) FROM FirstTab AS ft WHERE ft.id IS NOT ( SELECT id FROM SecondTab WHERE id IS NULL )
 -- my prediction: 0
+
+// the  result of not on null is always null - use is not!
 
 SELECT COUNT(*) FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id = 5 )
 -- my prediction: 3
