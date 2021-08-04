@@ -20,7 +20,7 @@ function addTask(e) {
 	p.innerHTML = newTask;
 
 		if (newTask !== "") {
-			
+
 			listTasks.appendChild(section);
 			listTasks.appendChild(hr);
 			document.forms[0].reset();
