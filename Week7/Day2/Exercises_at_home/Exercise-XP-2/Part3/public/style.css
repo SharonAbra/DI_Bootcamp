@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+.headline {
+    color: red;
+    border: 2px dashed blue;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    color:blue;
+}
