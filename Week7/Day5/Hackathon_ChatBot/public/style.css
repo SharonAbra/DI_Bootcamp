@@ -1,0 +1,8 @@
+.submit {
+    display: none;
+}
+
+.dialog {
+    border: 2px solid black;
+    width: 200px;
+}
