@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="main">
-        <div>
+    <div class="main">
+        <div class="imageDiv">
+            <img class="robot" src="robot.png">
+        </div>
+        <div class="bubbleDiv">
+            <img class="bubble display" src="bubble.png">
+        </div>
+        <div class="chat">
             <form id="form" method="GET">
-               <input class= "input" type="text" name="input" autocomplete="off">
+               <input class= "input" type="text" name="input" autocomplete="off" placeholder="Talk to me...">
                <input class="submit" type="submit" name="" value="GO">
             </form>
+            <div class="dialog"></div>
         </div>
-        <div class="dialog"></div>
+        
     </div>
     <script src="script.js"></script>
 </body>
