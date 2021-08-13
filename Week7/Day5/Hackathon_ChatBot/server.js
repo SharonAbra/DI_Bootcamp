@@ -2,6 +2,7 @@
 const exp = require('express');
 const cors = require('cors');
 const response = require('./modules/compareModule.js');
+const gif = require('./modules/gif_api_module.js');
 const app = exp();
 
 // middleware
@@ -14,6 +15,12 @@ app.get('/input', (req,res) => {
     let input = req.query.input
     // call the module function with user input as argument
     response.responseFunc(input)
+    // if (data.split(' ').includes('gif')) {
+    //   gif.getGif()
+    //   .then(gifObject => {
+    //   res.send(gifObject.data.images.original.url);
+    // })
+    // }
     .then((data) => {
       res.send({data: data});
     }).catch((err)=>{
@@ -25,15 +32,4 @@ app.get('/input', (req,res) => {
     console.log('error')
   }
 })
-
-// app.get('/input',(req,res) => {
-//   try {
-//     let input = req.query.input
-//     res.send(response.responseFunc(input))
-//     }
-//   catch {
-//     console.log('error')
-//   }
-// })
-
 app.listen(3000);

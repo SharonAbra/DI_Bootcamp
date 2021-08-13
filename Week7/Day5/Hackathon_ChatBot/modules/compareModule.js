@@ -12,24 +12,23 @@ const chooseResponse = (userInput) => {
             const responsesArray = [];
             for (let i = 0; i < data.length; i++) {
                 if(data[i]["trigger_body"]==userInput){
-                    // console.log(data[i]["trigger_body"]==userInput);
                     group = data[i]["trigger_group"];
             }
         }
             // retrieve responses data
-            DB.responses()
-            .then(data => {
-                // loop through the data to make an array of responses from same group classification
-                for (let j = 0; j < data.length; j++) {
-                    if (data[j]["response_group"] === group) {
-                        responsesArray.push(data[j]["response_body"])
-                    }
+        DB.responses()
+        .then(data => {
+            // loop through the data to make an array of responses from same group classification
+            for (let j = 0; j < data.length; j++) {
+                if (data[j]["response_group"] === group) {
+                    responsesArray.push(data[j]["response_body"])
                 }
-                // return a random response from the array of responses
-                const position = Math.floor(Math.random() * responsesArray.length)
-                const responseItem = responsesArray[position];
-                //console.warn(responseItem);
-                resolve(responseItem);
+            }
+            // return a random response from the array of responses
+            const position = Math.floor(Math.random() * responsesArray.length)
+            const responseItem = responsesArray[position];
+            //console.warn(responseItem);
+            resolve(responseItem);
             }).catch((err) => reject(err));
         }).catch((err) => reject(err));
     });

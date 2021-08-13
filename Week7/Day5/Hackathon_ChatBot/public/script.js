@@ -46,4 +46,3 @@ document.forms[0].addEventListener("submit", function(e) {
     }) 
     .catch(e => console.log(e))
 });
-
