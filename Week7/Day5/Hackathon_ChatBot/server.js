@@ -15,14 +15,15 @@ app.get('/input', (req,res) => {
     let input = req.query.input
     // call the module function with user input as argument
     response.responseFunc(input)
-    // if (data.split(' ').includes('gif')) {
-    //   gif.getGif()
-    //   .then(gifObject => {
-    //   res.send(gifObject.data.images.original.url);
-    // })
-    // }
     .then((data) => {
+      if (data.split(' ').includes('gif')) {
+        gif.getGif()
+        .then(gifObject => {
+        res.send({object:gifObject.data.images.original.url, data: data});
+      })
+      } else {
       res.send({data: data});
+      }
     }).catch((err)=>{
       // something went wrong.
       console.error(err)

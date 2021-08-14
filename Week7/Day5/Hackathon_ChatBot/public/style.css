@@ -72,3 +72,8 @@ body {
 .span {
     font-weight: bolder;
 }
+
+.gif {
+    width: 400px;
+    height: 400px;
+}

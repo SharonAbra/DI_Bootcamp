@@ -35,13 +35,28 @@ document.forms[0].addEventListener("submit", function(e) {
         // hold server response before appending
         setTimeout(function() {
             // add server response to dialog box
-            let child2 = document.createTextNode(data.data);
             let span = document.createElement("span");
-            span.setAttribute("class", "span");
-            span.append(child2);
+            span.setAttribute("class", "span");            
             dialogBox.appendChild(span)
             dialogBox.appendChild(linebreak2);
             bubble.classList.add("display");
+            // make the text clickable if media is sent from the server
+                if (data.data.split(' ').includes('gif')) {
+                    let child2 = document.createTextNode(data.data);
+                    span.append(child2);
+                    let robot = document.querySelector(".robot")
+                    robot.addEventListener("click", function() {
+                        let source = data.object;
+                        let image = document.createElement("img");
+                        image.setAttribute("src", source);
+                        image.setAttribute("class", "gif");
+                        dialogBox.innerHTML = "";
+                        dialogBox.appendChild(image);
+                    });
+                } else {
+                    let child2 = document.createTextNode(data.data);
+                    span.append(child2);
+                }
         }, 800)
     }) 
     .catch(e => console.log(e))
