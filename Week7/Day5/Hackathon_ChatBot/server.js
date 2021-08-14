@@ -16,7 +16,7 @@ app.get('/input', (req,res) => {
     // call the module function with user input as argument
     response.responseFunc(input)
     .then((data) => {
-      if (data.split(' ').includes('gif')) {
+      if (data.split(' ').includes('pic')) {
         gif.getGif()
         .then(gifObject => {
         res.send({object:gifObject.data.images.original.url, data: data});
