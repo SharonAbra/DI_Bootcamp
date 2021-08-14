@@ -71,3 +71,27 @@ document.forms[0].addEventListener("submit", function(e) {
     }) 
     .catch(e => console.log(e))
 });
+
+
+const playVideo = () => {
+    const idArray = ['ZbZSe6N_BXs?autoplay=1&start=4', '2zNSgSzhBfM?start=70', 'U5TqIdff_DQ', 'iPUmE-tne5U', '0mYBSayCsH0'];
+    const position = Math.floor(Math.random() * idArray.length);
+    let frame = document.createElement("iframe");
+    frame.setAttribute("src", `https://www.youtube.com/embed/${idArray[position]}`);
+    frame.setAttribute("width", "400px");
+    frame.setAttribute("height", "225px");
+    const dialogBox = document.querySelector(".dialog");
+    dialogBox.appendChild(frame);
+    let stopButton = document.createElement("button");
+    stopButton.innerHTML = "Stop screening";
+    stopButton.classList.add("stopButton");
+    let anotherButton = document.createElement("button");
+    anotherButton.innerHTML = "Another one please";
+    anotherButton.classList.add("anotherButton");
+    dialogBox.appendChild(stopButton);
+    dialogBox.appendChild(anotherButton);
+    // anotherButton.addEventListener("click", playVideo)
+}
+
+playVideo()
+

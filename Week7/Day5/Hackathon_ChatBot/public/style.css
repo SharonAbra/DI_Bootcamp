@@ -51,10 +51,6 @@ body {
     width:200px;
 }
 
-/* .imageDiv {
-    display: flex;
-} */
-
 .robot {
     width: 400px;
 }
@@ -76,4 +72,20 @@ body {
 .gif {
     width: 400px;
     height: 400px;
+}
+
+.stopButton, .anotherButton {
+    background-color: aliceblue;
+    border-radius: 5px;
+    font-size: 100%;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 20px
+}
+
+.stopButton:hover, .anotherButton:hover {
+    transform: scale(1.1);
+}
+
+.anotherButton {
+    float: right;
 }
