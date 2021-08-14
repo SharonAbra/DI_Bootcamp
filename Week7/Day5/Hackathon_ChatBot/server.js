@@ -17,11 +17,14 @@ app.get('/input', (req,res) => {
     response.responseFunc(input)
     .then((data) => {
       if (data.split(' ').includes('pic')) {
+        // call the gif module to get data from api
         gif.getGif()
         .then(gifObject => {
+        // send data from both modules
         res.send({object:gifObject.data.images.original.url, data: data});
       })
       } else {
+      // send data from database only
       res.send({data: data});
       }
     }).catch((err)=>{

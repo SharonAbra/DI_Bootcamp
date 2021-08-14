@@ -8,6 +8,7 @@ const chooseResponse = (userInput) => {
         DB.triggers()
         // loop through the data to see if user's input in it, and retrieve group classification
         .then(data => {
+            // if the user input is not in the database, it will be assigned to ALT group and receive a random generic response
             let group = 'ALT';
             const responsesArray = [];
             for (let i = 0; i < data.length; i++) {
