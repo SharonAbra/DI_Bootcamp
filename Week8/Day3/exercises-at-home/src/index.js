@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import ExerciseXP from './ExerciseXP.js';
 import ExerciseXPplus from './ExerciseXPplus.js';
+import DailyChallenge from './DailyChallenge';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExerciseXP />
-    <ExerciseXPplus/>
+    {/* <ExerciseXP />
+    <ExerciseXPplus/> */}
+    <DailyChallenge/>
   </React.StrictMode>,
   document.getElementById('root')
 );
