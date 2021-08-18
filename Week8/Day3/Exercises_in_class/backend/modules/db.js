@@ -1,4 +1,5 @@
 const knex = require('knex');
+require('dotenv/config');
 
 const db = knex({
   client: 'pg',
@@ -6,7 +7,7 @@ const db = knex({
     host : '127.0.0.1',
     port: '5433',
     user : 'postgres',
-    password : '',
+    password : process.env.POSTGRES_PASSWORD,
     database : 'dvdrental'
   }
 });
