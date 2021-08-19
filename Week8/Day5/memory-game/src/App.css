@@ -1,0 +1,30 @@
+body {
+  background-color: #ecbc90;
+  text-align:center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  border: 1px solid black;
+}
+.scores {
+  color:white;
+  background-color: #ec370c;
+  padding: 1px;
+}
+
+span {
+  margin: 10px;
+}
+
+.instructions {
+  background-color: #ec370c;
+  margin: 0px;
+  color: white;
+}
+
