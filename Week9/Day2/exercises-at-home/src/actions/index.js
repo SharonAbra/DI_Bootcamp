@@ -1,23 +1,20 @@
 // actions:
 
-//to move on to the next day
-const forward = weekday => {
+const increase = counter => {
     return {
-        type: "FORWARD_DAY",
-        day: weekday
+        type: "INCREASE_COUNT",
+        payload: counter
     }
 }
 
-//to go back to the previous day
-const backward = weekday => {
+const decrease = counter => {
     return {
-        type: "BACKWARD_DAY",
-        day: weekday
+        type: "DECREASE_COUNT",
+        payload: counter
     }
 }
 
-//we export the two functions
 export {
-    forward,
-    backward,
+    increase,
+    decrease,
 }

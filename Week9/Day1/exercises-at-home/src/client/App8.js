@@ -5,8 +5,9 @@ class App8 extends React.Component {
       super();
       this.state = {
         message: '',
-        server:''
+        server: ''
       }
+      this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     async componentDidMount() {
@@ -17,17 +18,16 @@ class App8 extends React.Component {
 
     async handleSubmit () {
       let input = document.getElementById("input").value
-      console.log(input)
-      const res = await fetch('http://localhost:4000/api/world', {
+      const incoming = await fetch('http://localhost:4000/api/world', {
         method:'POST',
         headers: {
           'Content-type':'application/json'
       },
       body: JSON.stringify({input:input})
     })
-      let json = await res.json();
-      let message = json.message;
-      this.setState({server:message});
+      let data = await incoming.json();
+      let text = data.message;
+      this.setState({server:text});
   }
 
     render() {

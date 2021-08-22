@@ -1,7 +1,5 @@
 import React from 'react';
-import Day from './Day';
-
-//import the store from store/index.js file
+import Counter from './components/Counter.js'
 import { store } from './store/index.js';
 
 class App extends React.Component {
@@ -12,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Day weekday={store.getState().weekday} />
+        <Counter counter={store.getState().counter}/>
       </div>
     )
   }
