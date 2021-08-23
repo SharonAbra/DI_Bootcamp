@@ -1,23 +1,33 @@
-import React from 'react';
-import { store } from './store.js';
-
-class MovieDetails extends React.Component {
-  constructor() {
-    super();
-  }
-
-  mapStateToProps() {
-      
-  }
-
-  render() {
-      // if (movie is selected)
+import { connect } from 'react-redux';
+ 
+const MovieDetails = (props) => {
+  const {movie} = props;
+  if (movie === undefined) {
     return (
       <div>
-        Select a movie
+        <h1>Movie</h1>
+        <p>Select a movie</p>
       </div>
     )
+  } else {
+    return (
+        <>
+        <h1>Details:</h1>
+        <div>Title: {movie.title}</div>
+          <div>Release Date: {movie.releaseDate}</div>
+          <div>Rating: {movie.rating}</div>
+        </>
+      )
   }
 }
 
-export default MovieDetails;
+const mstp = (state) => {
+  return {
+    movie:state.selectedMovieReducer.movie
+  }
+}
+
+export default connect(mstp)(MovieDetails);
+
+
+

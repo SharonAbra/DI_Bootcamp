@@ -1,8 +1,13 @@
-const movieAction = movie => {
+export const showList = moviesArray => {
     return {
-        type: 'MOVIE_SELECTED',
-        payload: movie
+        type: 'SHOW_DETAILS',
+        payload: moviesArray
     }
 }
 
-export default movieAction;
+export const getDetails = e => {
+    return {
+        type: 'MOVIE_SELECTED',
+        payload: e.target.id
+    }
+}
