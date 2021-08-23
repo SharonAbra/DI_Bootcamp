@@ -1,7 +1,5 @@
-// store:
-
-import { createStore } from "redux";
-import { reducer } from "../reducers";
+import { createStore } from 'redux';
+import { reducer } from './reducers';
 
 const initialState = { counter: 0 }
 

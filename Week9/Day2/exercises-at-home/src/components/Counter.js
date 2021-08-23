@@ -1,32 +1,29 @@
-import React from "react";
-import { store } from '../store/index.js';
 import { increase, decrease } from '../actions/index.js';
+import { connect } from 'react-redux'
 
-const Counter = ({ counter }) => {
 
-    const handleClick = event => {
-        const buttonType = event.target.id
-
-        switch (buttonType) {
-            case "plus":
-                store.dispatch(increase(counter));
-                break;
-            case "minus":
-                store.dispatch(decrease(counter));
-                break;
-            default:
-                console.log("wrong button")
-        }
-    }
-
+const Counter = ({ counter, increase, decrease }) => {
 
     return (
         <>
-            <button onClick={handleClick} id="plus">+</button>
+            <button onClick={increase}>+</button>
             <span>{counter}</span>
-            <button onClick={handleClick} id="minus">-</button>
+            <button onClick={decrease}>-</button>
         </>
     );
 };
 
-export default Counter;
+const mstp = (state) => {
+    return {
+        counter:state.counter
+    }
+}
+
+const mdtp = (dispatch) => {
+    return {
+        increase: () => dispatch(increase()),
+        decrease: () => dispatch(decrease())
+    }
+}
+
+export default connect(mstp, mdtp)(Counter);

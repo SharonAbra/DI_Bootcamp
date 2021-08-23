@@ -1,18 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import AppDaily from './Daily_Challenge/AppDaily';
 import App from './App';
-// we import the store to use the subscribe(listener) method
-import { store } from './store/index.js';
+import { Provider } from 'react-redux';
+// import { store } from './Daily_Challenge/store';
+import { createStore } from "redux";
+import { reducer } from "./reducers";
 
-//1.
-const render = function() {
-  ReactDOM.render(<App />, document.getElementById("root"))
-} 
+export const store = createStore(reducer);
 
-//2.
-render()
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-//3. 
-store.subscribe(render);
+// const render = function() {
+//   ReactDOM.render(<App />, document.getElementById("root"))
+// } 
+// render()
 
+// store.subscribe(render);
