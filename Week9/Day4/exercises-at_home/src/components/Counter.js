@@ -1,22 +1,30 @@
 import {connect} from 'react-redux';
-import { plusOne, minusOne, incrementIfOdd } from '../redux/actions';
+import { plusOne, minusOne } from '../redux/actions';
 
-const Counter = ({counter, plusOne, minusOne, incrementIfOdd}) => {
+const Counter = (props) => {
+    const {counter, plusOne, minusOne} = props;
+
+    const incrementIfOdd = () => {
+        if (counter % 2 !== 0) {
+            plusOne();
+        }
+    }
+
+const addAsync = () => {
+        setTimeout( () => {
+            plusOne();
+        }, 1000)
+    }
+
     return (
         <>
             <div>Clicked: {counter} times</div>
             <button onClick={plusOne}>+</button>
             <button onClick={minusOne}>-</button>
-            {/* <button onClick={incrementIfOdd}>increment If Odd</button>
-            <button onClick={addAsync}>Add async</button> */}
+            <button onClick={incrementIfOdd}>increment If Odd</button>
+            <button onClick={addAsync}>Add async</button>
         </>
     )
-}
-
-const addAsync = () => {
-    // setTimeout( () => {
-    //     counter++
-    // }, 1000)
 }
 
 const mstp = (state) => {
@@ -27,9 +35,8 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
     return {
-        plusOne: () => dispatch(plusOne),
-        minusOne: () => dispatch(minusOne),
-        // incrementIfOdd: () => dispatch(incrementIfOdd)
+        plusOne: () => dispatch(plusOne()),
+        minusOne: () => dispatch(minusOne()),
     }
 }
 

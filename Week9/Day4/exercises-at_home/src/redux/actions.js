@@ -1,20 +1,14 @@
-// import {DECREMENT, INCREMENT, ODD} from '../constants'
+import {DECREMENT, INCREMENT, ODD} from '../constants'
 
 export const plusOne = () => {
 
       return {
-        type: 'INCREMENT'
+        type: INCREMENT
       }
 }
 
 export const minusOne = () => {
     return {
-      type: 'DECREMENT'
+      type: DECREMENT
       }
 }
-
-// export const incrementIfOdd = () => {
-//   return {
-//     type: ODD
-//   }
-// }
