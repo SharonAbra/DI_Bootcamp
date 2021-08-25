@@ -1,28 +1,22 @@
-import FirstName from './FirstName';
-import SecondName from './SecondName';
-import Button from './Button';
-import Results from './Results';
 import React from 'react';
+import Fname from './components/Fname';
+import Sname from './components/Sname';
+import Calc from './components/Calc';
+import Res from './components/Res';
+import './App.css';
 
-class App extends React.Component{
-  render(){
-  return (
-    <div>
-      <div>
-        <FirstName/>
+const App = () => {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Fname />
+          <Sname />
+          <Calc/>
+          <Res/>
+        </header>
       </div>
-      <div>
-        <SecondName/>
-      </div>
-      <div>
-        <Button/>
-      </div>
-      <div>
-        <Results/>
-      </div>
-    </div>
-  )
+    )
 }
-}
+
 
 export default App;
