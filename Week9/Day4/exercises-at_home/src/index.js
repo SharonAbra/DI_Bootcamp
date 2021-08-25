@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import AppDaily from './daily_challenge/AppDaily.js';
+import XP2 from './exerciseXP2/XP2.js';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 // import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import {reducer} from './daily_challenge/reducer';
+import {reducer} from './exerciseXP2/reducer';
 
 const logAction = store => {
   return next => {
@@ -27,7 +27,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <App /> */}
-      <AppDaily />
+      <XP2 />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
