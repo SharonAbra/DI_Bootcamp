@@ -1,0 +1,27 @@
+.general {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.city {
+    align-self: flex-start;
+}
+
+.favorites {
+    align-self: flex-end;
+}
+
+.boxes {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}

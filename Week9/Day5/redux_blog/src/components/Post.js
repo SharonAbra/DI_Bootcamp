@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import {deletePost} from '../redux/actions.js'
+import { deletePost } from '../redux/actions.js'
 import React from 'react';
 
 class Post extends React.Component {
 
     handleClick = () => {
-        deletePost(this.props.post.id);
+        this.props.deletePost(this.props.post.id);
         this.props.history.push('/')
     }
 
@@ -32,7 +32,7 @@ const mstp = (state, ownProps) => {
 
 const mdtp = (dispatch) => {
     return {
-    deletePost: () => dispatch(deletePost())
+    deletePost: (id) => dispatch(deletePost(id))
     }
 }
 
