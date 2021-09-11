@@ -1,0 +1,73 @@
+create table login (
+	id serial not null primary key,
+	hash varchar(1000) not null,
+	email varchar(250) not null unique 
+)
+
+create table users (
+	id serial not null primary key,
+	name varchar(250) not null,
+	email varchar(250) not null unique references login(email),
+	joined date not null default CURRENT_DATE
+)
+
+ ******** npm i express bcrypt body-parser cors jsonwebtoken knex pg
+
+ import React from 'react';
+import {Link} from 'react-router-dom';
+
+class Register extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      name: ''
+    }
+  }
+
+  onNameChange = (e) => {
+    this.setState({name:e.target.value})
+  }
+  onEmailChange = (e) => {
+    this.setState({email:e.target.value})
+  }
+  onPasswordChange = (e) => {
+    this.setState({password:e.target.value})
+  }
+  onSubmitSignIn =() => {
+    
+  }
+  render() {
+    return (
+      <>
+        <h2>Register</h2>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input type="text"
+                name="name" id="name"
+                onChange={this.onNameChange} />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input type="email"
+                name="email" id="email"
+                onChange={this.onEmailChange} />
+        </div>
+        <div>
+          <label htmlFor="password">Email</label>
+          <input type="password"
+                name="password" id="password"
+                onChange={this.onPasswordChange} />
+        </div>
+        <div>
+          <input type="submit"
+                onClick={this.onSubmitSignIn}
+                value="Register"/>
+        </div>
+      </>
+    )
+  }
+}
+
+export default Register
